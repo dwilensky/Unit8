@@ -1,0 +1,41 @@
+<!-- Exercise 6.5 Tip Calculator -->
+<!-- Implement a web page that performs a tip calculation -->
+<!-- Dovi Wilensky, CS81, 17Jul2016 -->
+
+<!DOCTYPE>
+
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tip</title>
+<script>
+
+// Model
+var bill, percent, tip;
+
+// Controller
+var prod = function() {
+
+   // input elements for the original cost and tip rate
+   bill = +document.getElementById("bill").value;			
+   percent = +document.getElementById("percent").value;
+
+   // calculate the tip
+   tip = bill * (percent/100);
+   
+   //output the result
+   document.getElementById("tip").innerHTML = "Tip Amount: " + tip;
+}
+</script>
+</head>
+<body>
+
+<!-- View -->
+<label>Bill Total:<input type="number" id="bill"></label>
+	<!-- use input type = "number" to make input processing a little bit easier --> 
+<label>Percent of Tip (enter 15 for 15%):<input type="number" id="percent"></label>		
+	<!-- button to trigger the calculation -->
+<input type="button" onclick="prod() ;" value="Calculate Tip">		
+<div id="tip"></div>
+</body>
+</html>
