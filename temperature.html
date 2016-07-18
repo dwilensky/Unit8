@@ -1,0 +1,32 @@
+   <!-- Exercise 6.3 Temperature Converter -->
+   <!-- Modify Temp Converter code so that uses buttons defined by the button id elements -->
+   <!-- Dovi Wilensky, CS81, 17Jul2016 -->
+
+<!doctype html>
+<html>
+   <head>
+      <meta charset="UTF-8"/>
+	  <title>JavaScript Temperature Converter</title>
+   </head> 
+   <body> 
+      <h1>Temperature Conversion</h1>
+      <p>
+         <input type="text" id="temperature" />					<!-- 3a. Beyond the HTML tags, does anything else need to change? -->
+<!--     <input type="button" id="f_to_c" value="F to C" /		<!-- Answer: No, aside from removing the original input elements --> 
+<!--	 <input type="button" id="c_to_f" value="C to F" /		<!-- and the JavaScript code is unchanged -->
+ 
+<!-- modify the temperature control buttons so that is uses buttons def. w/in these elements -->
+         <button id = "f_to_c"> F to C</button>
+         <button id = "c_to_f"> C to F</button>
+      </p>
+      <!-- Computation result will go here -->         		
+      <p id="result"></p>
+      <script src="temperature.js"></script>
+   </body>
+</html>
+
+<!-- 3b. Can you think of a functional difference between the two button creating elements?
+	Answer: for aesthetic reasons, one might chose to stay with the traditional 'input type = "button"' 
+	element, especially if coding a block of various input types. A critical reason not to use this element
+	is that it is treated differently by different browsers: some versions of IE submit the text between the <button>, 
+	</button> tags, while other browsers will submit the content of the value attribute. 
